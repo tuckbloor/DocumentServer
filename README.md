@@ -24,18 +24,18 @@ Document Server provides a central place for teams to organise documents, find f
 
 ## Features
 
-| Area | Description |
-| --- | --- |
-| Dashboard | Summary cards for documents, Word files, Excel files, shared files and users. |
-| Document browser | Browse documents in a card grid or list; use tabs, filters, sorting and pagination. |
-| Personal documents | View your documents separately from the full document collection. |
-| Sharing | View shared documents and use each document's **Share** action to manage collaboration where permitted. |
-| Recent & favourites | Return to recently used files and keep frequently accessed documents handy. |
-| Categories | Browse documents grouped by category. |
-| Document versions | See version labels such as **v1**, **v2** and **v5** on document cards. |
-| Office integration | Choose an available **Open with** option, including **LibreOffice** in the pictured setup. |
-| Recycle Bin | Access the area for deleted documents and any recovery actions exposed by your installation. |
-| Administration | Dedicated **Users**, **Audit Log** and **Settings** navigation for authorised accounts. |
+| Area                | Description                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
+| Dashboard           | Summary cards for documents, Word files, Excel files, shared files and users.                           |
+| Document browser    | Browse documents in a card grid or list; use tabs, filters, sorting and pagination.                     |
+| Personal documents  | View your documents separately from the full document collection.                                       |
+| Sharing             | View shared documents and use each document's **Share** action to manage collaboration where permitted. |
+| Recent & favourites | Return to recently used files and keep frequently accessed documents handy.                             |
+| Categories          | Browse documents grouped by category.                                                                   |
+| Document versions   | See version labels such as **v1**, **v2** and **v5** on document cards.                                 |
+| Office integration  | Choose an available **Open with** option, including **LibreOffice** in the pictured setup.              |
+| Recycle Bin         | Access the area for deleted documents and any recovery actions exposed by your installation.            |
+| Administration      | Dedicated **Users**, **Audit Log** and **Settings** navigation for authorised accounts.                 |
 
 > Some commands and menu items depend on your account permissions and which integrations have been configured. This guide describes the visible navigation and expected workflows; it does not assume that every possible action, such as restoring an old revision, is implemented.
 
@@ -183,7 +183,7 @@ From the Dashboard, choose one of the document tabs:
 - **Recent:** return to recently accessed documents.
 - **Favourites:** find documents you've marked as favourites.
 
-Use **Filter** to narrow the selection, **Sort** (shown as *Latest* in the screenshot) to change ordering, and the **grid/list** controls at the top right to change the view. Pagination at the bottom moves through additional results.
+Use **Filter** to narrow the selection, **Sort** (shown as _Latest_ in the screenshot) to change ordering, and the **grid/list** controls at the top right to change the view. Pagination at the bottom moves through additional results.
 
 Each document card displays the file name, related category, update date, sharing information and its current version label. The card also provides **Open**, **Share** and a **three-dot (`⋮`) menu** for more actions.
 
@@ -218,7 +218,7 @@ For LibreOffice opening/editing, the workstation must have a compatible installa
 4. Confirm the share operation.
 5. Use **Shared with me**, the document's share information, or the available sharing management controls to verify access.
 
-The small *Shared with 1* / *Shared with 2* labels shown on cards indicate sharing information. Access is still subject to server-side permissions. Only share documents with people authorised to see their contents.
+The small _Shared with 1_ / _Shared with 2_ labels shown on cards indicate sharing information. Access is still subject to server-side permissions. Only share documents with people authorised to see their contents.
 
 ### 6. Use Recent and Favourites
 
@@ -240,11 +240,11 @@ Permanent deletion can be irreversible. It should be covered by backups and a de
 
 Document cards display version labels such as `v1`, `v3` and `v5`. These are document revisions, not the Laravel application version.
 
-| Example | Meaning |
-| --- | --- |
-| `v1` | The document's first recorded version. |
-| `v2` | A later recorded revision. |
-| `v5` | The document has reached its fifth recorded version. |
+| Example | Meaning                                              |
+| ------- | ---------------------------------------------------- |
+| `v1`    | The document's first recorded version.               |
+| `v2`    | A later recorded revision.                           |
+| `v5`    | The document has reached its fifth recorded version. |
 
 ### How to work safely with document revisions
 
@@ -278,17 +278,17 @@ Use **Settings** for the preferences and administrative configuration your accou
 
 From the project root, use the existing commands:
 
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start Vite Plus in development mode. |
-| `npm run build` | Build production frontend assets. |
-| `npm run check` | Check frontend formatting and lint rules without applying fixes. |
-| `npm run check:fix` | Apply supported frontend formatting/lint fixes. |
-| `npm run types:check` | Type-check Vue/TypeScript without emitting files. |
-| `vendor\bin\pint --test` | Check PHP formatting on Windows. |
-| `vendor\bin\pint` | Apply PHP formatting fixes on Windows. |
-| `php artisan test` | Run Laravel automated tests. |
-| `composer ci:check` | Run the checks currently configured in `composer.json`. |
+| Command                  | Purpose                                                          |
+| ------------------------ | ---------------------------------------------------------------- |
+| `npm run dev`            | Start Vite Plus in development mode.                             |
+| `npm run build`          | Build production frontend assets.                                |
+| `npm run check`          | Check frontend formatting and lint rules without applying fixes. |
+| `npm run check:fix`      | Apply supported frontend formatting/lint fixes.                  |
+| `npm run types:check`    | Type-check Vue/TypeScript without emitting files.                |
+| `vendor\bin\pint --test` | Check PHP formatting on Windows.                                 |
+| `vendor\bin\pint`        | Apply PHP formatting fixes on Windows.                           |
+| `php artisan test`       | Run Laravel automated tests.                                     |
+| `composer ci:check`      | Run the checks currently configured in `composer.json`.          |
 
 A typical local verification sequence is:
 
@@ -316,7 +316,7 @@ Avoid manually editing generated TypeScript under `resources/js/actions/` or `re
 
 ## Source-code version control with Git
 
-Use **Git** for changes to the Document Server application, and **document versions** for changes to files stored *inside* the application.
+Use **Git** for changes to the Document Server application, and **document versions** for changes to files stored _inside_ the application.
 
 ### Recommended workflow
 
@@ -377,18 +377,18 @@ Use your server's approved deployment procedure for Composer dependencies, migra
 
 ## Troubleshooting
 
-| Problem | What to check |
-| --- | --- |
-| Application will not load | Confirm Laravel is running, the configured `APP_URL` is correct and the chosen port is accessible. |
-| Blank page or missing styling | Start `npm run dev` locally, or rebuild production assets with `npm run build`. |
-| Login or database errors | Check `.env`, the configured database connection and migrations. |
+| Problem                           | What to check                                                                                                          |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Application will not load         | Confirm Laravel is running, the configured `APP_URL` is correct and the chosen port is accessible.                     |
+| Blank page or missing styling     | Start `npm run dev` locally, or rebuild production assets with `npm run build`.                                        |
+| Login or database errors          | Check `.env`, the configured database connection and migrations.                                                       |
 | Generated TypeScript route errors | Regenerate Wayfinder routes with `--with-form`; check any custom HTTP methods against the installed Wayfinder version. |
-| `*.form()` not found | Confirm Wayfinder form variants are generated and enabled in the existing Vite configuration. |
-| PHP formatting check fails | Run `vendor\bin\pint` and rerun the check. |
-| Frontend formatting check fails | Run `npm run check:fix`, then verify the changes. |
-| LibreOffice does not open | Check workstation installation, browser prompts and the server's desktop/WebDAV integration configuration. |
-| Saved changes do not appear | Confirm the document was successfully saved through the integration, then refresh and verify its content/version. |
-| User cannot see a document | Review its ownership, sharing and applicable access permissions. |
+| `*.form()` not found              | Confirm Wayfinder form variants are generated and enabled in the existing Vite configuration.                          |
+| PHP formatting check fails        | Run `vendor\bin\pint` and rerun the check.                                                                             |
+| Frontend formatting check fails   | Run `npm run check:fix`, then verify the changes.                                                                      |
+| LibreOffice does not open         | Check workstation installation, browser prompts and the server's desktop/WebDAV integration configuration.             |
+| Saved changes do not appear       | Confirm the document was successfully saved through the integration, then refresh and verify its content/version.      |
+| User cannot see a document        | Review its ownership, sharing and applicable access permissions.                                                       |
 
 ## Further reading
 
