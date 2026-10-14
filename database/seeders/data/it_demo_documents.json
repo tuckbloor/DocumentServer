@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "title": "Acceptable Use Policy",
+    "file_name": "Acceptable_Use_Policy.docx",
+    "category": "IT-Policies",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Acceptable_Use_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 2,
+    "title": "Remote Working Standard",
+    "file_name": "Remote_Working_Standard.docx",
+    "category": "IT-Policies",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Remote_Working_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 3,
+    "title": "Password and MFA Policy",
+    "file_name": "Password_and_MFA_Policy.docx",
+    "category": "IT-Policies",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Password_and_MFA_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 4,
+    "title": "Software Installation Procedure",
+    "file_name": "Software_Installation_Procedure.docx",
+    "category": "IT-Policies",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Software_Installation_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 5,
+    "title": "Data Retention and Disposal Policy",
+    "file_name": "Data_Retention_and_Disposal_Policy.docx",
+    "category": "IT-Policies",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Data_Retention_and_Disposal_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 6,
+    "title": "Policy Review Schedule",
+    "file_name": "Policy_Review_Schedule.xlsx",
+    "category": "IT-Policies",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Policy_Review_Schedule.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 7,
+    "title": "Policy Exceptions Register",
+    "file_name": "Policy_Exceptions_Register.xlsx",
+    "category": "IT-Policies",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Policy_Exceptions_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 8,
+    "title": "Compliance Checklist",
+    "file_name": "Compliance_Checklist.xlsx",
+    "category": "IT-Policies",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Compliance_Checklist.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 9,
+    "title": "Mandatory Training Matrix",
+    "file_name": "Mandatory_Training_Matrix.xlsx",
+    "category": "IT-Policies",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Mandatory_Training_Matrix.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 10,
+    "title": "Approved Software Register",
+    "file_name": "Approved_Software_Register.xlsx",
+    "category": "IT-Policies",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Policies/Approved_Software_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 11,
+    "title": "Campus Network Overview",
+    "file_name": "Campus_Network_Overview.docx",
+    "category": "Network-Infrastructure",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Campus_Network_Overview.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 12,
+    "title": "Firewall Rule Change Procedure",
+    "file_name": "Firewall_Rule_Change_Procedure.docx",
+    "category": "Network-Infrastructure",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Firewall_Rule_Change_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 13,
+    "title": "Wi-Fi Deployment Standard",
+    "file_name": "Wi-Fi_Deployment_Standard.docx",
+    "category": "Network-Infrastructure",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Wi-Fi_Deployment_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 14,
+    "title": "Switch Replacement Plan",
+    "file_name": "Switch_Replacement_Plan.docx",
+    "category": "Network-Infrastructure",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Switch_Replacement_Plan.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 15,
+    "title": "Network Monitoring Guide",
+    "file_name": "Network_Monitoring_Guide.docx",
+    "category": "Network-Infrastructure",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Network_Monitoring_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 16,
+    "title": "IP Address Register",
+    "file_name": "IP_Address_Register.xlsx",
+    "category": "Network-Infrastructure",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/IP_Address_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 17,
+    "title": "Network Device Inventory",
+    "file_name": "Network_Device_Inventory.xlsx",
+    "category": "Network-Infrastructure",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Network_Device_Inventory.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 18,
+    "title": "VLAN Reference List",
+    "file_name": "VLAN_Reference_List.xlsx",
+    "category": "Network-Infrastructure",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/VLAN_Reference_List.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 19,
+    "title": "WAN Circuit Tracker",
+    "file_name": "WAN_Circuit_Tracker.xlsx",
+    "category": "Network-Infrastructure",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/WAN_Circuit_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 20,
+    "title": "Network Change Calendar",
+    "file_name": "Network_Change_Calendar.xlsx",
+    "category": "Network-Infrastructure",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Network-Infrastructure/Network_Change_Calendar.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 21,
+    "title": "Incident Response Playbook",
+    "file_name": "Incident_Response_Playbook.docx",
+    "category": "Cybersecurity",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Incident_Response_Playbook.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 22,
+    "title": "Phishing Awareness Guide",
+    "file_name": "Phishing_Awareness_Guide.docx",
+    "category": "Cybersecurity",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Phishing_Awareness_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 23,
+    "title": "Vulnerability Management Procedure",
+    "file_name": "Vulnerability_Management_Procedure.docx",
+    "category": "Cybersecurity",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Vulnerability_Management_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 24,
+    "title": "Endpoint Protection Standard",
+    "file_name": "Endpoint_Protection_Standard.docx",
+    "category": "Cybersecurity",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Endpoint_Protection_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 25,
+    "title": "Security Baseline for Workstations",
+    "file_name": "Security_Baseline_for_Workstations.docx",
+    "category": "Cybersecurity",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Security_Baseline_for_Workstations.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 26,
+    "title": "Security Risk Register",
+    "file_name": "Security_Risk_Register.xlsx",
+    "category": "Cybersecurity",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Security_Risk_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 27,
+    "title": "Patch Compliance Tracker",
+    "file_name": "Patch_Compliance_Tracker.xlsx",
+    "category": "Cybersecurity",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Patch_Compliance_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 28,
+    "title": "Incident Log",
+    "file_name": "Incident_Log.xlsx",
+    "category": "Cybersecurity",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Incident_Log.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 29,
+    "title": "User Access Review",
+    "file_name": "User_Access_Review.xlsx",
+    "category": "Cybersecurity",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/User_Access_Review.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 30,
+    "title": "Security Awareness Attendance",
+    "file_name": "Security_Awareness_Attendance.xlsx",
+    "category": "Cybersecurity",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Cybersecurity/Security_Awareness_Attendance.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 31,
+    "title": "Laptop Allocation Procedure",
+    "file_name": "Laptop_Allocation_Procedure.docx",
+    "category": "Hardware-Assets",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Laptop_Allocation_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 32,
+    "title": "Printer Support Guide",
+    "file_name": "Printer_Support_Guide.docx",
+    "category": "Hardware-Assets",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Printer_Support_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 33,
+    "title": "Hardware Refresh Policy",
+    "file_name": "Hardware_Refresh_Policy.docx",
+    "category": "Hardware-Assets",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Hardware_Refresh_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 34,
+    "title": "Asset Tagging Standard",
+    "file_name": "Asset_Tagging_Standard.docx",
+    "category": "Hardware-Assets",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Asset_Tagging_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 35,
+    "title": "Docking Station Setup Guide",
+    "file_name": "Docking_Station_Setup_Guide.docx",
+    "category": "Hardware-Assets",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Docking_Station_Setup_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 36,
+    "title": "Asset Register",
+    "file_name": "Asset_Register.xlsx",
+    "category": "Hardware-Assets",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Asset_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 37,
+    "title": "Warranty Tracker",
+    "file_name": "Warranty_Tracker.xlsx",
+    "category": "Hardware-Assets",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Warranty_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 38,
+    "title": "Loan Equipment Log",
+    "file_name": "Loan_Equipment_Log.xlsx",
+    "category": "Hardware-Assets",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Loan_Equipment_Log.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 39,
+    "title": "Hardware Refresh Plan",
+    "file_name": "Hardware_Refresh_Plan.xlsx",
+    "category": "Hardware-Assets",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Hardware_Refresh_Plan.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 40,
+    "title": "Peripheral Stock Count",
+    "file_name": "Peripheral_Stock_Count.xlsx",
+    "category": "Hardware-Assets",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Hardware-Assets/Peripheral_Stock_Count.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 41,
+    "title": "License Compliance Procedure",
+    "file_name": "License_Compliance_Procedure.docx",
+    "category": "Software-Licensing",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/License_Compliance_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 42,
+    "title": "Application Packaging Standard",
+    "file_name": "Application_Packaging_Standard.docx",
+    "category": "Software-Licensing",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Application_Packaging_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 43,
+    "title": "Browser Extension Approval Guide",
+    "file_name": "Browser_Extension_Approval_Guide.docx",
+    "category": "Software-Licensing",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Browser_Extension_Approval_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 44,
+    "title": "Business Application Catalogue",
+    "file_name": "Business_Application_Catalogue.docx",
+    "category": "Software-Licensing",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Business_Application_Catalogue.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 45,
+    "title": "SaaS Subscription Review Policy",
+    "file_name": "SaaS_Subscription_Review_Policy.docx",
+    "category": "Software-Licensing",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/SaaS_Subscription_Review_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 46,
+    "title": "Software License Register",
+    "file_name": "Software_License_Register.xlsx",
+    "category": "Software-Licensing",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Software_License_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 47,
+    "title": "Renewal Calendar",
+    "file_name": "Renewal_Calendar.xlsx",
+    "category": "Software-Licensing",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Renewal_Calendar.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 48,
+    "title": "Application Owner Matrix",
+    "file_name": "Application_Owner_Matrix.xlsx",
+    "category": "Software-Licensing",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Application_Owner_Matrix.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 49,
+    "title": "Installation Audit",
+    "file_name": "Installation_Audit.xlsx",
+    "category": "Software-Licensing",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Installation_Audit.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 50,
+    "title": "Subscription Cost Tracker",
+    "file_name": "Subscription_Cost_Tracker.xlsx",
+    "category": "Software-Licensing",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Software-Licensing/Subscription_Cost_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 51,
+    "title": "Ticket Triage Procedure",
+    "file_name": "Ticket_Triage_Procedure.docx",
+    "category": "Service-Desk",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Ticket_Triage_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 52,
+    "title": "New Starter IT Checklist",
+    "file_name": "New_Starter_IT_Checklist.docx",
+    "category": "Service-Desk",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/New_Starter_IT_Checklist.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 53,
+    "title": "Offboarding Procedure",
+    "file_name": "Offboarding_Procedure.docx",
+    "category": "Service-Desk",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Offboarding_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 54,
+    "title": "Service Desk Knowledge Base Standard",
+    "file_name": "Service_Desk_Knowledge_Base_Standard.docx",
+    "category": "Service-Desk",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Service_Desk_Knowledge_Base_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 55,
+    "title": "VIP Support Guideline",
+    "file_name": "VIP_Support_Guideline.docx",
+    "category": "Service-Desk",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/VIP_Support_Guideline.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 56,
+    "title": "Open Ticket Dashboard",
+    "file_name": "Open_Ticket_Dashboard.xlsx",
+    "category": "Service-Desk",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Open_Ticket_Dashboard.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 57,
+    "title": "SLA Performance Tracker",
+    "file_name": "SLA_Performance_Tracker.xlsx",
+    "category": "Service-Desk",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/SLA_Performance_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 58,
+    "title": "Starter and Leaver Planner",
+    "file_name": "Starter_and_Leaver_Planner.xlsx",
+    "category": "Service-Desk",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Starter_and_Leaver_Planner.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 59,
+    "title": "Knowledge Base Review Log",
+    "file_name": "Knowledge_Base_Review_Log.xlsx",
+    "category": "Service-Desk",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Knowledge_Base_Review_Log.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 60,
+    "title": "Support Team Rota",
+    "file_name": "Support_Team_Rota.xlsx",
+    "category": "Service-Desk",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Service-Desk/Support_Team_Rota.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 61,
+    "title": "Backup Policy",
+    "file_name": "Backup_Policy.docx",
+    "category": "Backup-Recovery",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Backup_Policy.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 62,
+    "title": "Restore Test Procedure",
+    "file_name": "Restore_Test_Procedure.docx",
+    "category": "Backup-Recovery",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Restore_Test_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 63,
+    "title": "Disaster Recovery Overview",
+    "file_name": "Disaster_Recovery_Overview.docx",
+    "category": "Backup-Recovery",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Disaster_Recovery_Overview.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 64,
+    "title": "Cloud Backup Configuration Guide",
+    "file_name": "Cloud_Backup_Configuration_Guide.docx",
+    "category": "Backup-Recovery",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Cloud_Backup_Configuration_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 65,
+    "title": "Business Continuity Contact Plan",
+    "file_name": "Business_Continuity_Contact_Plan.docx",
+    "category": "Backup-Recovery",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Business_Continuity_Contact_Plan.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 66,
+    "title": "Backup Schedule Matrix",
+    "file_name": "Backup_Schedule_Matrix.xlsx",
+    "category": "Backup-Recovery",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Backup_Schedule_Matrix.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 67,
+    "title": "Restore Test Results",
+    "file_name": "Restore_Test_Results.xlsx",
+    "category": "Backup-Recovery",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Restore_Test_Results.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 68,
+    "title": "Recovery Objectives Register",
+    "file_name": "Recovery_Objectives_Register.xlsx",
+    "category": "Backup-Recovery",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Recovery_Objectives_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 69,
+    "title": "Critical System Priorities",
+    "file_name": "Critical_System_Priorities.xlsx",
+    "category": "Backup-Recovery",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/Critical_System_Priorities.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 70,
+    "title": "DR Exercise Tracker",
+    "file_name": "DR_Exercise_Tracker.xlsx",
+    "category": "Backup-Recovery",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Backup-Recovery/DR_Exercise_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 71,
+    "title": "Project Governance Framework",
+    "file_name": "Project_Governance_Framework.docx",
+    "category": "IT-Projects",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Project_Governance_Framework.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 72,
+    "title": "Migration Project Charter",
+    "file_name": "Migration_Project_Charter.docx",
+    "category": "IT-Projects",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Migration_Project_Charter.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 73,
+    "title": "Requirements Gathering Guide",
+    "file_name": "Requirements_Gathering_Guide.docx",
+    "category": "IT-Projects",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Requirements_Gathering_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 74,
+    "title": "Change Impact Assessment Template",
+    "file_name": "Change_Impact_Assessment_Template.docx",
+    "category": "IT-Projects",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Change_Impact_Assessment_Template.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 75,
+    "title": "Project Status Reporting Standard",
+    "file_name": "Project_Status_Reporting_Standard.docx",
+    "category": "IT-Projects",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Project_Status_Reporting_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 76,
+    "title": "Project RAID Log",
+    "file_name": "Project_RAID_Log.xlsx",
+    "category": "IT-Projects",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Project_RAID_Log.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 77,
+    "title": "Project Milestone Plan",
+    "file_name": "Project_Milestone_Plan.xlsx",
+    "category": "IT-Projects",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Project_Milestone_Plan.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 78,
+    "title": "Resource Allocation Matrix",
+    "file_name": "Resource_Allocation_Matrix.xlsx",
+    "category": "IT-Projects",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Resource_Allocation_Matrix.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 79,
+    "title": "Budget vs Actual Tracker",
+    "file_name": "Budget_vs_Actual_Tracker.xlsx",
+    "category": "IT-Projects",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Budget_vs_Actual_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 80,
+    "title": "Training Readiness Tracker",
+    "file_name": "Training_Readiness_Tracker.xlsx",
+    "category": "IT-Projects",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Projects/Training_Readiness_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 81,
+    "title": "Server Build Standard",
+    "file_name": "Server_Build_Standard.docx",
+    "category": "Servers-Cloud",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Server_Build_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 82,
+    "title": "Cloud Resource Naming Convention",
+    "file_name": "Cloud_Resource_Naming_Convention.docx",
+    "category": "Servers-Cloud",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Cloud_Resource_Naming_Convention.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 83,
+    "title": "Patch Window Communication Guide",
+    "file_name": "Patch_Window_Communication_Guide.docx",
+    "category": "Servers-Cloud",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Patch_Window_Communication_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 84,
+    "title": "Virtual Machine Provisioning Procedure",
+    "file_name": "Virtual_Machine_Provisioning_Procedure.docx",
+    "category": "Servers-Cloud",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Virtual_Machine_Provisioning_Procedure.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 85,
+    "title": "Server Monitoring Runbook",
+    "file_name": "Server_Monitoring_Runbook.docx",
+    "category": "Servers-Cloud",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Server_Monitoring_Runbook.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 86,
+    "title": "Server Inventory",
+    "file_name": "Server_Inventory.xlsx",
+    "category": "Servers-Cloud",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Server_Inventory.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 87,
+    "title": "Cloud Cost Summary",
+    "file_name": "Cloud_Cost_Summary.xlsx",
+    "category": "Servers-Cloud",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Cloud_Cost_Summary.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 88,
+    "title": "Patching Calendar",
+    "file_name": "Patching_Calendar.xlsx",
+    "category": "Servers-Cloud",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Patching_Calendar.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 89,
+    "title": "Capacity Planning Tracker",
+    "file_name": "Capacity_Planning_Tracker.xlsx",
+    "category": "Servers-Cloud",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/Capacity_Planning_Tracker.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 90,
+    "title": "VM Provisioning Queue",
+    "file_name": "VM_Provisioning_Queue.xlsx",
+    "category": "Servers-Cloud",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/Servers-Cloud/VM_Provisioning_Queue.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 91,
+    "title": "Daily Operations Checklist",
+    "file_name": "Daily_Operations_Checklist.docx",
+    "category": "IT-Operations",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Daily_Operations_Checklist.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 92,
+    "title": "Major Incident Communication Plan",
+    "file_name": "Major_Incident_Communication_Plan.docx",
+    "category": "IT-Operations",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Major_Incident_Communication_Plan.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 93,
+    "title": "Change Freeze Guidance",
+    "file_name": "Change_Freeze_Guidance.docx",
+    "category": "IT-Operations",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Change_Freeze_Guidance.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 94,
+    "title": "Monitoring Threshold Standard",
+    "file_name": "Monitoring_Threshold_Standard.docx",
+    "category": "IT-Operations",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Monitoring_Threshold_Standard.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 95,
+    "title": "Supplier Escalation Guide",
+    "file_name": "Supplier_Escalation_Guide.docx",
+    "category": "IT-Operations",
+    "document_type": "docx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Supplier_Escalation_Guide.docx",
+    "demo": "yes"
+  },
+  {
+    "id": 96,
+    "title": "Daily Service Health Log",
+    "file_name": "Daily_Service_Health_Log.xlsx",
+    "category": "IT-Operations",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Daily_Service_Health_Log.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 97,
+    "title": "Operations KPI Dashboard",
+    "file_name": "Operations_KPI_Dashboard.xlsx",
+    "category": "IT-Operations",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Operations_KPI_Dashboard.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 98,
+    "title": "Change Schedule",
+    "file_name": "Change_Schedule.xlsx",
+    "category": "IT-Operations",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Change_Schedule.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 99,
+    "title": "Supplier Contact Register",
+    "file_name": "Supplier_Contact_Register.xlsx",
+    "category": "IT-Operations",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Supplier_Contact_Register.xlsx",
+    "demo": "yes"
+  },
+  {
+    "id": 100,
+    "title": "Outage and Maintenance Calendar",
+    "file_name": "Outage_and_Maintenance_Calendar.xlsx",
+    "category": "IT-Operations",
+    "document_type": "xlsx",
+    "storage_path": "storage/app/private/document-server/IT-Operations/Outage_and_Maintenance_Calendar.xlsx",
+    "demo": "yes"
+  }
+]
