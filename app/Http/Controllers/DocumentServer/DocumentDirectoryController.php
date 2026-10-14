@@ -20,6 +20,7 @@ class DocumentDirectoryController extends Controller
     private function viewer(Request $request): array
     {
         $profile = DB::table('user_profiles')->where('user_id', $request->user()->id)->first();
+
         return [
             'name' => $request->user()->name,
             'role' => 'Administrator',
@@ -42,6 +43,7 @@ class DocumentDirectoryController extends Controller
                 'role' => $u->role ?: 'Member',
                 'avatar' => $u->avatar_path ? Storage::disk('public')->url($u->avatar_path) : '/images/users/avatar-default.png',
             ]);
+
         return Inertia::render('DocumentServerUsers', ['team' => $users, 'viewer' => $this->viewer($request)]);
     }
 
@@ -52,6 +54,7 @@ class DocumentDirectoryController extends Controller
             ->leftJoin('users as u', 'u.id', '=', 'da.user_id')
             ->select('da.id', 'da.document_title', 'da.event', 'da.created_at', 'u.name as user_name')
             ->orderByDesc('da.id')->paginate(25);
+
         return Inertia::render('DocumentServerActivity', ['activity' => $activity, 'viewer' => $this->viewer($request)]);
     }
 }

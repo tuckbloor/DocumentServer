@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { Form, Head, Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
@@ -30,18 +29,20 @@ const user = computed(() => page.props.auth.user);
 const initials = computed(() => {
     const name = user.value.name?.trim() || '';
 
-    return name
-        .split(/\s+/)
-        .slice(0, 2)
-        .map((part) => part.charAt(0).toUpperCase())
-        .join('') || 'U';
+    return (
+        name
+            .split(/\s+/)
+            .slice(0, 2)
+            .map((part) => part.charAt(0).toUpperCase())
+            .join('') || 'U'
+    );
 });
 </script>
 
 <template>
     <Head title="My Account | Document Server" />
 
-    <div class="w-full min-h-screen bg-[#f4f7fb] px-5 py-7 lg:px-10 lg:py-9">
+    <div class="min-h-screen w-full bg-[#f4f7fb] px-5 py-7 lg:px-10 lg:py-9">
         <!-- Navigation -->
         <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
             <Link
@@ -65,15 +66,21 @@ const initials = computed(() => {
                 Back to Dashboard
             </Link>
 
-            <span class="text-xs font-bold uppercase tracking-[0.14em] text-[#647991]">
+            <span
+                class="text-xs font-bold tracking-[0.14em] text-[#647991] uppercase"
+            >
                 Document Server / Account
             </span>
         </div>
 
         <!-- Header -->
-        <header class="flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#10243e] px-8 py-8 text-white shadow-sm lg:px-10">
+        <header
+            class="flex flex-wrap items-center justify-between gap-6 rounded-2xl bg-[#10243e] px-8 py-8 text-white shadow-sm lg:px-10"
+        >
             <div>
-                <p class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-[#8ab9fa]">
+                <p
+                    class="mb-2 text-xs font-bold tracking-[0.16em] text-[#8ab9fa] uppercase"
+                >
                     Account management
                 </p>
 
@@ -87,7 +94,9 @@ const initials = computed(() => {
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#5c85b5] bg-[#244e7d] text-xl font-extrabold text-white">
+                <div
+                    class="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#5c85b5] bg-[#244e7d] text-xl font-extrabold text-white"
+                >
                     {{ initials }}
                 </div>
 
@@ -105,9 +114,15 @@ const initials = computed(() => {
         <!-- Main content -->
         <div class="mt-7 grid grid-cols-1 gap-6 xl:grid-cols-12">
             <!-- Personal information -->
-            <section class="min-w-0 rounded-2xl border border-[#dfe7f0] bg-white shadow-sm xl:col-span-8">
-                <div class="flex items-center gap-4 border-b border-[#e7edf5] px-7 py-6 lg:px-9">
-                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#eaf2ff] text-[#1769d7]">
+            <section
+                class="min-w-0 rounded-2xl border border-[#dfe7f0] bg-white shadow-sm xl:col-span-8"
+            >
+                <div
+                    class="flex items-center gap-4 border-b border-[#e7edf5] px-7 py-6 lg:px-9"
+                >
+                    <div
+                        class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#eaf2ff] text-[#1769d7]"
+                    >
                         <svg
                             width="24"
                             height="24"
@@ -188,9 +203,12 @@ const initials = computed(() => {
                     </div>
 
                     <!-- Actions -->
-                    <div class="mt-9 flex flex-wrap items-center justify-between gap-5 border-t border-[#e7edf5] pt-7">
+                    <div
+                        class="mt-9 flex flex-wrap items-center justify-between gap-5 border-t border-[#e7edf5] pt-7"
+                    >
                         <p class="text-sm text-[#657991]">
-                            Your changes are saved to your Document Server account.
+                            Your changes are saved to your Document Server
+                            account.
                         </p>
 
                         <div class="flex flex-wrap items-center gap-4">
@@ -215,11 +233,7 @@ const initials = computed(() => {
                                 data-test="update-profile-button"
                                 class="!min-h-12 !rounded-lg !bg-[#1769d7] !px-7 !text-sm !font-bold !text-white hover:!bg-[#1155af]"
                             >
-                                {{
-                                    processing
-                                        ? 'Saving...'
-                                        : 'Save Changes'
-                                }}
+                                {{ processing ? 'Saving...' : 'Save Changes' }}
                             </Button>
                         </div>
                     </div>
@@ -228,7 +242,9 @@ const initials = computed(() => {
 
             <!-- Account summary -->
             <aside class="space-y-6 xl:col-span-4">
-                <section class="rounded-2xl border border-[#dfe7f0] bg-white shadow-sm">
+                <section
+                    class="rounded-2xl border border-[#dfe7f0] bg-white shadow-sm"
+                >
                     <div class="border-b border-[#e7edf5] px-7 py-6">
                         <h2 class="text-lg font-extrabold text-[#152b47]">
                             Account Overview
@@ -240,27 +256,39 @@ const initials = computed(() => {
 
                     <div class="space-y-6 px-7 py-7">
                         <div>
-                            <p class="mb-2 text-xs font-bold uppercase tracking-wide text-[#72849b]">
+                            <p
+                                class="mb-2 text-xs font-bold tracking-wide text-[#72849b] uppercase"
+                            >
                                 Account name
                             </p>
-                            <p class="break-words text-base font-bold text-[#183758]">
+                            <p
+                                class="text-base font-bold break-words text-[#183758]"
+                            >
                                 {{ user.name }}
                             </p>
                         </div>
 
                         <div class="border-t border-[#e7edf5] pt-6">
-                            <p class="mb-2 text-xs font-bold uppercase tracking-wide text-[#72849b]">
+                            <p
+                                class="mb-2 text-xs font-bold tracking-wide text-[#72849b] uppercase"
+                            >
                                 Email address
                             </p>
-                            <p class="break-all text-base font-semibold text-[#183758]">
+                            <p
+                                class="text-base font-semibold break-all text-[#183758]"
+                            >
                                 {{ user.email }}
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section class="rounded-2xl border border-[#cfe0f5] bg-[#edf5ff] px-7 py-7">
-                    <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-white text-[#1769d7]">
+                <section
+                    class="rounded-2xl border border-[#cfe0f5] bg-[#edf5ff] px-7 py-7"
+                >
+                    <div
+                        class="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-white text-[#1769d7]"
+                    >
                         <svg
                             width="23"
                             height="23"
@@ -282,15 +310,17 @@ const initials = computed(() => {
                     </h3>
 
                     <p class="mt-3 text-sm leading-7 text-[#516b89]">
-                        Your profile details are used to identify you
-                        throughout your document workspace.
+                        Your profile details are used to identify you throughout
+                        your document workspace.
                     </p>
                 </section>
             </aside>
         </div>
 
         <!-- Delete account -->
-        <section class="mt-6 rounded-2xl border border-[#e8d3d3] bg-white px-7 py-7 shadow-sm lg:px-9">
+        <section
+            class="mt-6 rounded-2xl border border-[#e8d3d3] bg-white px-7 py-7 shadow-sm lg:px-9"
+        >
             <DeleteUser />
         </section>
     </div>

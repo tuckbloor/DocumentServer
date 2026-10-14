@@ -4,6 +4,7 @@ namespace App\Http\Controllers\DocumentServer;
 
 use App\Http\Controllers\Controller;
 use App\Support\DocumentServer\DocumentAccess;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,6 +20,7 @@ class DocumentController extends Controller
     {
         $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
         abort_unless(in_array($extension, ['docx', 'xlsx'], true), 422);
+
         return $extension;
     }
 
@@ -28,6 +30,7 @@ class DocumentController extends Controller
         abort_unless($disk === 'local' && str_starts_with($path, 'document-server/')
             && ! str_contains($path, '..') && ! str_contains($path, '\\'), 404);
         abort_unless(Storage::disk('local')->exists($path), 404);
+
         return Storage::disk('local')->path($path);
     }
 
@@ -90,6 +93,7 @@ class DocumentController extends Controller
             }
             throw $exception;
         }
+
         return back()->with('success', count($createdPaths).' document(s) uploaded securely.');
     }
 
@@ -106,16 +110,18 @@ class DocumentController extends Controller
             'last_opened_at' => now(), 'open_count' => ((int) $previousCount) + 1,
         ]);
         DocumentAccess::record((int) $request->user()->id, $doc->id, 'downloaded', $doc->title);
+
         return response()->download($path, $doc->original_filename, ['Cache-Control' => 'private, no-store']);
     }
 
-    public function versions(Request $request, int $document): \Illuminate\Http\JsonResponse
+    public function versions(Request $request, int $document): JsonResponse
     {
         $doc = DocumentAccess::document($document, (int) $request->user()->id);
         $versions = DB::table('document_versions as v')
             ->leftJoin('users as u', 'u.id', '=', 'v.created_by')
             ->where('v.document_id', $doc->id)->orderByDesc('v.version_number')
             ->get(['v.version_number', 'v.created_at', 'v.change_summary', 'v.size_bytes', 'u.name as author']);
+
         return response()->json(['versions' => $versions]);
     }
 
@@ -125,6 +131,7 @@ class DocumentController extends Controller
         $rev = DB::table('document_versions')->where('document_id', $doc->id)->where('version_number', $version)->first();
         abort_unless($rev !== null, 404);
         $path = $this->privateFile($rev->storage_path, $rev->storage_disk);
+
         return response()->download($path, $rev->original_filename, ['Cache-Control' => 'private, no-store']);
     }
 
@@ -180,6 +187,7 @@ class DocumentController extends Controller
             Storage::disk('local')->delete($path);
             throw $exception;
         }
+
         return back()->with('success', 'New document version saved.');
     }
 
@@ -188,6 +196,7 @@ class DocumentController extends Controller
         $doc = DocumentAccess::document($document, (int) $request->user()->id, 'owner');
         DB::table('documents')->where('id', $doc->id)->update(['deleted_at' => now(), 'updated_at' => now()]);
         DocumentAccess::record((int) $request->user()->id, $doc->id, 'deleted', $doc->title);
+
         return back()->with('success', 'Document moved to Recycle Bin.');
     }
 
@@ -197,6 +206,7 @@ class DocumentController extends Controller
         abort_unless($doc->deleted_at !== null, 404);
         DB::table('documents')->where('id', $doc->id)->update(['deleted_at' => null, 'updated_at' => now()]);
         DocumentAccess::record((int) $request->user()->id, $doc->id, 'restored', $doc->title);
+
         return redirect('/dashboard?tab=trash')->with('success', 'Document restored.');
     }
 }

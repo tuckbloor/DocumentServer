@@ -14,7 +14,7 @@ class DocumentServerEngagementSeeder extends Seeder
         if (! app()->environment(['local', 'testing'])) {
             throw new RuntimeException('Demo activity may only be seeded in local or testing.');
         }
-        $manifest = (new DocumentServerDocumentsSeeder())->validatedManifest();
+        $manifest = (new DocumentServerDocumentsSeeder)->validatedManifest();
         $now = now();
         foreach ($manifest as $index => $row) {
             $uuid = Uuid::uuid5(Uuid::NAMESPACE_URL, 'document-server-demo-document/'.$row['_relative_path'])->toString();

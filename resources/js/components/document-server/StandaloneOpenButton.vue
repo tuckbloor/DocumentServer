@@ -9,17 +9,20 @@ type OpenResult = {
     session_id: number;
 };
 
-const props = withDefaults(defineProps<{
-    documentId: number;
-    filename: string;
-    canEdit?: boolean;
-    buttonClass?: string;
-    editor?: DesktopEditor;
-}>(), {
-    canEdit: false,
-    buttonClass: 'ds-open',
-    editor: 'libreoffice',
-});
+const props = withDefaults(
+    defineProps<{
+        documentId: number;
+        filename: string;
+        canEdit?: boolean;
+        buttonClass?: string;
+        editor?: DesktopEditor;
+    }>(),
+    {
+        canEdit: false,
+        buttonClass: 'ds-open',
+        editor: 'libreoffice',
+    },
+);
 
 const busy = ref(false);
 const error = ref('');
@@ -30,7 +33,9 @@ function csrf(): string {
 }
 
 function nativeLink(officeUri: string, editor: DesktopEditor): string {
-    const match = /^ms-(word|excel):(ofe|ofv)\|u\|(https?:\/\/[^\s]+)$/i.exec(officeUri);
+    const match = /^ms-(word|excel):(ofe|ofv)\|u\|(https?:\/\/[^\s]+)$/i.exec(
+        officeUri,
+    );
 
     if (!match) {
         throw new Error('Invalid desktop editing link.');
@@ -41,13 +46,21 @@ function nativeLink(officeUri: string, editor: DesktopEditor): string {
     const url = new URL(match[3]);
 
     if (
-        !/^\/standalone-dav\/[A-Za-z0-9_-]{43}\/[^/]+\.(docx|xlsx)$/i.test(url.pathname) ||
-        url.search || url.hash || url.username || url.password
+        !/^\/standalone-dav\/[A-Za-z0-9_-]{43}\/[^/]+\.(docx|xlsx)$/i.test(
+            url.pathname,
+        ) ||
+        url.search ||
+        url.hash ||
+        url.username ||
+        url.password
     ) {
         throw new Error('Invalid document address.');
     }
 
-    if (url.protocol !== 'https:' && !['localhost', '127.0.0.1'].includes(url.hostname)) {
+    if (
+        url.protocol !== 'https:' &&
+        !['localhost', '127.0.0.1'].includes(url.hostname)
+    ) {
         throw new Error('HTTPS is required outside localhost.');
     }
 
@@ -73,26 +86,41 @@ async function open(): Promise<void> {
     error.value = '';
 
     try {
-        const response = await fetch(`/documents/${props.documentId}/standalone/open`, {
-            method: 'POST',
-            credentials: 'same-origin',
-            headers: {
-                Accept: 'application/json',
-                'X-XSRF-TOKEN': csrf(),
-                'X-Requested-With': 'XMLHttpRequest',
+        const response = await fetch(
+            `/documents/${props.documentId}/standalone/open`,
+            {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: {
+                    Accept: 'application/json',
+                    'X-XSRF-TOKEN': csrf(),
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
             },
-        });
+        );
 
-        if (response.status === 429) throw new Error('Too many attempts. Wait one minute and open again.');
-        if (response.status === 423) throw new Error('This document is currently locked by another user.');
-        if (response.status === 403) throw new Error('You do not have access to this document.');
-        if (response.status === 401) throw new Error('Your session has expired. Please sign in again.');
-        if (!response.ok) throw new Error(`Unable to open document (HTTP ${response.status}).`);
+        if (response.status === 429)
+            throw new Error(
+                'Too many attempts. Wait one minute and open again.',
+            );
+        if (response.status === 423)
+            throw new Error(
+                'This document is currently locked by another user.',
+            );
+        if (response.status === 403)
+            throw new Error('You do not have access to this document.');
+        if (response.status === 401)
+            throw new Error('Your session has expired. Please sign in again.');
+        if (!response.ok)
+            throw new Error(
+                `Unable to open document (HTTP ${response.status}).`,
+            );
 
-        const result = await response.json() as OpenResult;
+        const result = (await response.json()) as OpenResult;
         window.location.assign(nativeLink(result.open_uri, props.editor));
     } catch (e) {
-        error.value = e instanceof Error ? e.message : 'Could not launch the document.';
+        error.value =
+            e instanceof Error ? e.message : 'Could not launch the document.';
     } finally {
         busy.value = false;
     }
@@ -111,7 +139,9 @@ async function open(): Promise<void> {
             <img src="/images/actions/open.png" alt="" />
             {{ busy ? 'Opening...' : 'Open' }}
         </button>
-        <small v-if="error" role="alert" class="ds-open-error">{{ error }}</small>
+        <small v-if="error" role="alert" class="ds-open-error">{{
+            error
+        }}</small>
     </span>
 </template>
 

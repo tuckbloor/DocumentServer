@@ -4,7 +4,6 @@ namespace App\Support\DocumentServer;
 
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 
 final class DocumentAccess
 {
@@ -44,16 +43,16 @@ final class DocumentAccess
     {
         $query = DB::table('documents as d')->where(function (Builder $q) use ($userId) {
             $q->where('d.owner_id', $userId)
-              ->orWhereExists(function (Builder $shared) use ($userId) {
-                  $shared->selectRaw('1')
-                      ->from('document_shares as ds')
-                      ->whereColumn('ds.document_id', 'd.id')
-                      ->where('ds.user_id', $userId)
-                      ->whereNull('ds.revoked_at')
-                      ->where(function (Builder $expiry) {
-                          $expiry->whereNull('ds.expires_at')->orWhere('ds.expires_at', '>', now());
-                      });
-              });
+                ->orWhereExists(function (Builder $shared) use ($userId) {
+                    $shared->selectRaw('1')
+                        ->from('document_shares as ds')
+                        ->whereColumn('ds.document_id', 'd.id')
+                        ->where('ds.user_id', $userId)
+                        ->whereNull('ds.revoked_at')
+                        ->where(function (Builder $expiry) {
+                            $expiry->whereNull('ds.expires_at')->orWhere('ds.expires_at', '>', now());
+                        });
+                });
         });
 
         if (! $includeDeleted) {

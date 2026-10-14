@@ -43,6 +43,7 @@ class DocumentShareController extends Controller
             'created_at' => now(),
         ]);
         DocumentAccess::record((int) $request->user()->id, $doc->id, 'shared', $doc->title, ['recipient_id' => $data['user_id'], 'permission' => $data['permission']]);
+
         return back()->with('success', 'Document shared successfully.');
     }
 
@@ -52,6 +53,7 @@ class DocumentShareController extends Controller
         DB::table('document_shares')->where('document_id', $doc->id)->where('user_id', $recipient)
             ->whereNull('revoked_at')->update(['revoked_at' => now(), 'updated_at' => now()]);
         DocumentAccess::record((int) $request->user()->id, $doc->id, 'revoked', $doc->title, ['recipient_id' => $recipient]);
+
         return back()->with('success', 'Document access removed.');
     }
 }

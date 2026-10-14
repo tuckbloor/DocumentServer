@@ -13,15 +13,23 @@ final class StandaloneDavRoot extends Collection
     public function __construct(private string $secret, private StandaloneSessionService $sessions,
         private StandaloneRevisionService $revisions, private ?string $ifMatch) {}
 
-    public function getName() { return 'root'; }
+    public function getName()
+    {
+        return 'root';
+    }
+
     public function getChildren(): array
     {
         return [new StandaloneDavFile($this->secret, $this->sessions, $this->revisions, $this->ifMatch)];
     }
+
     public function getChild($name)
     {
         $expected = $this->sessions->resolve($this->secret)->document->original_filename;
-        if ($name !== $expected) throw new NotFound('Unknown file');
+        if ($name !== $expected) {
+            throw new NotFound('Unknown file');
+        }
+
         return new StandaloneDavFile($this->secret, $this->sessions, $this->revisions, $this->ifMatch);
     }
 }

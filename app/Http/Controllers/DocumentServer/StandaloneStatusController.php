@@ -25,6 +25,7 @@ final class StandaloneStatusController extends Controller
             ->where('user_id', $userId)->first() : null;
 
         $state = $session ? Cache::get('document-server:standalone:dav:'.$session->id, []) : [];
+
         return response()->json([
             'version' => (int) $doc->current_version,
             'session_active' => $session !== null && $session->status === 'active'

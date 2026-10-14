@@ -227,6 +227,7 @@ class DocumentCategoryController extends Controller
         if ($query->exists()) {
             throw ValidationException::withMessages(['name' => 'A category with a similar name already exists.']);
         }
+
         return $slug;
     }
 }

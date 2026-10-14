@@ -14,6 +14,7 @@ class DocumentFavouritesPageTest extends TestCase
     use RefreshDatabase;
 
     private User $owner;
+
     private User $colleague;
 
     protected function setUp(): void

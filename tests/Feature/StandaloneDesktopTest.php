@@ -14,9 +14,12 @@ class StandaloneDesktopTest extends TestCase
     use RefreshDatabase;
 
     private User $owner;
+
     private User $colleague;
+
     private int $docId;
-    private const DOCX = "PK\x03\x04"."FAKE-OFFICE-DOCUMENT-V1";
+
+    private const DOCX = "PK\x03\x04".'FAKE-OFFICE-DOCUMENT-V1';
 
     protected function setUp(): void
     {
@@ -57,6 +60,7 @@ class StandaloneDesktopTest extends TestCase
     {
         // The office URI contains the actual HTTPS resource URL after the |u| delimiter.
         $httpUrl = explode('|u|', $uri, 2)[1];
+
         return parse_url($httpUrl, PHP_URL_PATH);
     }
 
@@ -162,7 +166,7 @@ class StandaloneDesktopTest extends TestCase
     {
         $link = $this->createSession($this->owner);
         $path = $this->davPath($link['open_uri']);
-        $bytes = "PK\x03\x04"."FAKE-OFFICE-DOCUMENT-V2";
+        $bytes = "PK\x03\x04".'FAKE-OFFICE-DOCUMENT-V2';
         $this->call('PUT', $path, [], [], [], [], $bytes)->assertSuccessful();
         $this->assertDatabaseHas('documents', ['id' => $this->docId, 'current_version' => 2]);
         $this->assertDatabaseCount('document_versions', 2);

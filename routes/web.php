@@ -74,13 +74,30 @@ Route::middleware(['auth', 'verified', 'throttle:30,1'])->group(function () {
 
 // WebDAV clients use a scoped, short-lived editing token rather than browser cookies.
 // This endpoint must validate the token and document permissions on every request.
-Route::match([
-    'GET', 'HEAD', 'OPTIONS', 'PROPFIND', 'PROPPATCH', 'PUT', 'LOCK', 'UNLOCK', 'REPORT',
-], '/standalone-dav/{token}/{path?}', [StandaloneDavController::class, 'handle'])
+
+Route::get(
+    '/standalone-dav/{token}/{path?}',
+    [StandaloneDavController::class, 'handle']
+)
     ->where('token', '[A-Za-z0-9_-]{43}')
     ->where('path', '.*')
     ->withoutMiddleware([PreventRequestForgery::class])
     ->middleware('throttle:120,1')
     ->name('document-server.standalone-dav');
+
+Route::match(
+    ['OPTIONS', 'PROPFIND', 'PROPPATCH', 'PUT', 'LOCK', 'UNLOCK', 'REPORT'],
+    '/standalone-dav/{token}/{path?}',
+    function (string $token, ?string $path = null) {
+        return app()->call(
+            [app(StandaloneDavController::class), 'handle'],
+            ['token' => $token, 'path' => $path]
+        );
+    }
+)
+    ->where('token', '[A-Za-z0-9_-]{43}')
+    ->where('path', '.*')
+    ->withoutMiddleware([PreventRequestForgery::class])
+    ->middleware('throttle:120,1');
 
 require __DIR__.'/settings.php';

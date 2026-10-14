@@ -19,7 +19,7 @@ class DocumentServerDemoSeeder extends Seeder
         }
 
         // Fail before writing any database records if the 100-file pack is incomplete.
-        (new DocumentServerDocumentsSeeder())->validatedManifest();
+        (new DocumentServerDocumentsSeeder)->validatedManifest();
 
         DB::transaction(function (): void {
             $this->call([

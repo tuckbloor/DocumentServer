@@ -11,7 +11,9 @@ use RuntimeException;
 class DocumentServerDocumentsSeeder extends Seeder
 {
     public const MANIFEST = __DIR__.'/data/it_demo_documents.json';
+
     public const PRIVATE_PREFIX = 'storage/app/private/';
+
     public const DOCUMENT_PREFIX = 'document-server/';
 
     /**
@@ -74,6 +76,7 @@ class DocumentServerDocumentsSeeder extends Seeder
         if ($counts['docx'] !== 50 || $counts['xlsx'] !== 50) {
             throw new RuntimeException('Document pack must contain 50 Word and 50 Excel documents.');
         }
+
         return $entries;
     }
 

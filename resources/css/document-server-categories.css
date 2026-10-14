@@ -1,63 +1,434 @@
 /* Categories feature only. Keeps the approved navy/white Document Server shell. */
-.ds-shell .dsc-heading{margin-bottom:21px}
-.ds-shell .dsc-breadcrumb{display:flex;gap:11px;align-items:center;color:#70839c;font-size:12px;margin-bottom:12px}
-.ds-shell .dsc-breadcrumb a{color:#1764b8;text-decoration:none}
-.ds-shell .dsc-primary{display:inline-flex;align-items:center;gap:10px;justify-content:center;white-space:nowrap;border-radius:7px;background:#096ddd;color:#fff;border:1px solid #096ddd;padding:12px 16px;font-size:13px;font-weight:700;cursor:pointer}
-.ds-shell .dsc-primary img{height:17px;width:17px;object-fit:contain;filter:brightness(0) invert(1)}
-.ds-shell .dsc-summary{display:flex;align-items:center;gap:23px;background:#fff;border:1px solid #e2eaf4;border-radius:10px;padding:19px 23px;box-shadow:0 3px 20px #1129490b;margin-bottom:28px;flex-wrap:wrap}
-.ds-shell .dsc-summary-icon{width:62px;height:62px;border-radius:10px;background:#eaf3ff;display:flex;align-items:center;justify-content:center}
-.ds-shell .dsc-summary-icon img{height:34px;width:34px;object-fit:contain}
-.ds-shell .dsc-summary strong{display:block;font-size:27px;line-height:1.2;color:#142b4a;font-weight:800}
-.ds-shell .dsc-summary span{display:block;color:#607891;font-size:12px;margin-top:5px}
-.ds-shell .dsc-summary-divider{height:45px;border-left:1px solid #e3eaf3}
-.ds-shell .dsc-summary-detail{margin-left:auto;color:#617791;font-size:11px;font-weight:550}
-.ds-shell .dsc-section-heading{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:17px}
-.ds-shell .dsc-section-heading h2{font-size:18px;line-height:1.3;color:#152b47;font-weight:750;margin:0 0 4px}
-.ds-shell .dsc-section-heading p{font-size:12px;color:#70829c;margin:0}
-.ds-shell .dsc-link{color:#0868d5;font-size:13px;font-weight:700;text-decoration:none}
-.ds-shell .dsc-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-bottom:28px}
-.ds-shell .dsc-category-card{appearance:none;text-align:left;min-width:0;border:1px solid #e0e9f3;border-radius:9px;background:#fff;padding:18px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 3px 12px #1b365c0d;color:#213653;cursor:pointer;transition:box-shadow .15s,border-color .15s}
-.ds-shell .dsc-category-card:hover{border-color:#83b2ed;box-shadow:0 5px 20px #1a5aab1b}
-.ds-shell .dsc-category-card:focus-visible{outline:3px solid #1769d3;outline-offset:2px}
-.ds-shell .dsc-category-selected{border:2px solid #096ddd;background:#f4f9ff;padding:17px 13px}
-.ds-shell .dsc-folder-icon{width:52px;height:52px;border-radius:9px;background:#eaf4ff;flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.ds-shell .dsc-folder-icon img{width:28px;height:28px;object-fit:contain}
-.ds-shell .dsc-category-main{min-width:0;flex:1}
-.ds-shell .dsc-category-main strong{display:block;color:#182e4e;font-size:13px;font-weight:750;overflow-wrap:anywhere;line-height:1.4}
-.ds-shell .dsc-category-main small{display:block;color:#788ba1;font-size:11px;margin-top:5px}
-.ds-shell .dsc-mini-counts{display:flex;gap:9px;margin-left:auto;align-items:center;color:#526785;font-size:11px}
-.ds-shell .dsc-mini-counts span{display:flex;align-items:center;gap:3px}
-.ds-shell .dsc-mini-counts img{height:20px;width:16px;object-fit:contain}
-.ds-shell .dsc-arrow{font-size:24px;color:#9eb0c7;line-height:1}
-.ds-shell .dsc-document-panel{scroll-margin-top:24px;background:#fff;border:1px solid #e2eaf4;border-radius:10px;box-shadow:0 5px 22px #233d5a0e;overflow:hidden;margin-top:8px}
-.ds-shell .dsc-panel-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 23px 20px;border-bottom:1px solid #e6ecf4;flex-wrap:wrap}
-.ds-shell .dsc-eyebrow{display:block;color:#1f69bf;font-size:10px;letter-spacing:1.2px;font-weight:800;margin-bottom:7px}
-.ds-shell .dsc-panel-header h2{font-size:21px;color:#162a46;font-weight:750;margin:0 0 5px}
-.ds-shell .dsc-panel-header p{font-size:12px;color:#7c8aa1;margin:0}
-.ds-shell .dsc-panel-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.ds-shell .dsc-danger{color:#b5273d!important;border-color:#f1c5cc!important}
-.ds-shell .dsc-filters{display:flex;gap:13px;justify-content:flex-end;padding:15px 24px;background:#fbfdff;border-bottom:1px solid #edf1f6}
-.ds-shell .dsc-filters label{font-size:12px;color:#465c78;font-weight:650;display:flex;gap:9px;align-items:center}
-.ds-shell .dsc-filters select{border:1px solid #d6e2ef;color:#274367;border-radius:6px;background:#fff;padding:9px 27px 9px 10px;min-width:140px}
-.ds-shell .dsc-file-row{display:flex;align-items:center;gap:15px;padding:14px 23px;border-bottom:1px solid #eaf0f6}
-.ds-shell .dsc-file-row:last-child{border-bottom:0}
-.ds-shell .dsc-file-row:hover{background:#f8fbff}
-.ds-shell .dsc-file-icon{width:38px;height:45px;object-fit:contain;flex-shrink:0}
-.ds-shell .dsc-file-info{flex:1;min-width:0}
-.ds-shell .dsc-file-info strong{display:block;font-size:13px;color:#192f4f;font-weight:720;overflow-wrap:anywhere}
-.ds-shell .dsc-file-info small{display:block;font-size:11px;color:#7b8ea6;margin-top:6px;line-height:1.5}
-.ds-shell .dsc-file-label{display:inline-block;background:#edf5ff;color:#2462a8;padding:6px 9px;border-radius:5px;font-size:10px;font-weight:650;white-space:nowrap}
-.ds-shell .dsc-file-open{gap:6px;min-width:90px}
-.ds-shell .dsc-file-open img{height:17px;width:17px;object-fit:contain}
-.ds-shell .dsc-pagebar{display:flex;justify-content:space-between;align-items:center;padding:16px 23px;gap:12px;color:#71829a;font-size:12px;flex-wrap:wrap}
-.ds-shell .dsc-pagebar>div{display:flex;align-items:center;gap:13px}
-.ds-shell .dsc-pagebar a{color:#1266c5;text-decoration:none;font-weight:700}
-.ds-shell .dsc-no-categories,.ds-shell .dsc-no-files{text-align:center;padding:38px 20px;color:#60748e}
-.ds-shell .dsc-no-categories img,.ds-shell .dsc-no-files img{width:145px;height:110px;object-fit:contain;margin:0 auto}
-.ds-shell .dsc-no-files strong{display:block;font-size:16px;margin-top:10px;color:#243852}
-.ds-shell .dsc-no-files p{font-size:12px;margin-top:5px}
-.ds-shell .dsc-error{padding:12px 15px;border:1px solid #eeb5bc;background:#fff2f3;color:#a51931;margin-bottom:16px;border-radius:8px;font-size:13px}
-.ds-shell .dsc-modal{max-width:490px}
-@media (max-width:1500px){.ds-shell .dsc-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-shell .dsc-summary-detail{flex-basis:100%;margin-left:0}}
-@media (max-width:830px){.ds-shell .dsc-category-grid{grid-template-columns:1fr}.ds-shell .dsc-summary{gap:15px}.ds-shell .dsc-summary-divider{height:35px}.ds-shell .dsc-file-label{display:none}}
-@media (max-width:560px){.ds-shell .dsc-file-row{flex-wrap:wrap}.ds-shell .dsc-file-info{flex-basis:70%}.ds-shell .dsc-file-open{width:100%}.ds-shell .dsc-filters{justify-content:stretch;flex-wrap:wrap}.ds-shell .dsc-filters label{width:100%;justify-content:space-between}.ds-shell .dsc-filters select{flex:1}.ds-shell .dsc-summary-divider{display:none}}
+.ds-shell .dsc-heading {
+    margin-bottom: 21px;
+}
+.ds-shell .dsc-breadcrumb {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    color: #70839c;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+.ds-shell .dsc-breadcrumb a {
+    color: #1764b8;
+    text-decoration: none;
+}
+.ds-shell .dsc-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 7px;
+    background: #096ddd;
+    color: #fff;
+    border: 1px solid #096ddd;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.ds-shell .dsc-primary img {
+    height: 17px;
+    width: 17px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+.ds-shell .dsc-summary {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    background: #fff;
+    border: 1px solid #e2eaf4;
+    border-radius: 10px;
+    padding: 19px 23px;
+    box-shadow: 0 3px 20px #1129490b;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+.ds-shell .dsc-summary-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 10px;
+    background: #eaf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ds-shell .dsc-summary-icon img {
+    height: 34px;
+    width: 34px;
+    object-fit: contain;
+}
+.ds-shell .dsc-summary strong {
+    display: block;
+    font-size: 27px;
+    line-height: 1.2;
+    color: #142b4a;
+    font-weight: 800;
+}
+.ds-shell .dsc-summary span {
+    display: block;
+    color: #607891;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.ds-shell .dsc-summary-divider {
+    height: 45px;
+    border-left: 1px solid #e3eaf3;
+}
+.ds-shell .dsc-summary-detail {
+    margin-left: auto;
+    color: #617791;
+    font-size: 11px;
+    font-weight: 550;
+}
+.ds-shell .dsc-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 18px;
+    margin-bottom: 17px;
+}
+.ds-shell .dsc-section-heading h2 {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #152b47;
+    font-weight: 750;
+    margin: 0 0 4px;
+}
+.ds-shell .dsc-section-heading p {
+    font-size: 12px;
+    color: #70829c;
+    margin: 0;
+}
+.ds-shell .dsc-link {
+    color: #0868d5;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.ds-shell .dsc-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 28px;
+}
+.ds-shell .dsc-category-card {
+    appearance: none;
+    text-align: left;
+    min-width: 0;
+    border: 1px solid #e0e9f3;
+    border-radius: 9px;
+    background: #fff;
+    padding: 18px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 3px 12px #1b365c0d;
+    color: #213653;
+    cursor: pointer;
+    transition:
+        box-shadow 0.15s,
+        border-color 0.15s;
+}
+.ds-shell .dsc-category-card:hover {
+    border-color: #83b2ed;
+    box-shadow: 0 5px 20px #1a5aab1b;
+}
+.ds-shell .dsc-category-card:focus-visible {
+    outline: 3px solid #1769d3;
+    outline-offset: 2px;
+}
+.ds-shell .dsc-category-selected {
+    border: 2px solid #096ddd;
+    background: #f4f9ff;
+    padding: 17px 13px;
+}
+.ds-shell .dsc-folder-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 9px;
+    background: #eaf4ff;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ds-shell .dsc-folder-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.ds-shell .dsc-category-main {
+    min-width: 0;
+    flex: 1;
+}
+.ds-shell .dsc-category-main strong {
+    display: block;
+    color: #182e4e;
+    font-size: 13px;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+}
+.ds-shell .dsc-category-main small {
+    display: block;
+    color: #788ba1;
+    font-size: 11px;
+    margin-top: 5px;
+}
+.ds-shell .dsc-mini-counts {
+    display: flex;
+    gap: 9px;
+    margin-left: auto;
+    align-items: center;
+    color: #526785;
+    font-size: 11px;
+}
+.ds-shell .dsc-mini-counts span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.ds-shell .dsc-mini-counts img {
+    height: 20px;
+    width: 16px;
+    object-fit: contain;
+}
+.ds-shell .dsc-arrow {
+    font-size: 24px;
+    color: #9eb0c7;
+    line-height: 1;
+}
+.ds-shell .dsc-document-panel {
+    scroll-margin-top: 24px;
+    background: #fff;
+    border: 1px solid #e2eaf4;
+    border-radius: 10px;
+    box-shadow: 0 5px 22px #233d5a0e;
+    overflow: hidden;
+    margin-top: 8px;
+}
+.ds-shell .dsc-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 23px 23px 20px;
+    border-bottom: 1px solid #e6ecf4;
+    flex-wrap: wrap;
+}
+.ds-shell .dsc-eyebrow {
+    display: block;
+    color: #1f69bf;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+.ds-shell .dsc-panel-header h2 {
+    font-size: 21px;
+    color: #162a46;
+    font-weight: 750;
+    margin: 0 0 5px;
+}
+.ds-shell .dsc-panel-header p {
+    font-size: 12px;
+    color: #7c8aa1;
+    margin: 0;
+}
+.ds-shell .dsc-panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.ds-shell .dsc-danger {
+    color: #b5273d !important;
+    border-color: #f1c5cc !important;
+}
+.ds-shell .dsc-filters {
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    padding: 15px 24px;
+    background: #fbfdff;
+    border-bottom: 1px solid #edf1f6;
+}
+.ds-shell .dsc-filters label {
+    font-size: 12px;
+    color: #465c78;
+    font-weight: 650;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+.ds-shell .dsc-filters select {
+    border: 1px solid #d6e2ef;
+    color: #274367;
+    border-radius: 6px;
+    background: #fff;
+    padding: 9px 27px 9px 10px;
+    min-width: 140px;
+}
+.ds-shell .dsc-file-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 23px;
+    border-bottom: 1px solid #eaf0f6;
+}
+.ds-shell .dsc-file-row:last-child {
+    border-bottom: 0;
+}
+.ds-shell .dsc-file-row:hover {
+    background: #f8fbff;
+}
+.ds-shell .dsc-file-icon {
+    width: 38px;
+    height: 45px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+.ds-shell .dsc-file-info {
+    flex: 1;
+    min-width: 0;
+}
+.ds-shell .dsc-file-info strong {
+    display: block;
+    font-size: 13px;
+    color: #192f4f;
+    font-weight: 720;
+    overflow-wrap: anywhere;
+}
+.ds-shell .dsc-file-info small {
+    display: block;
+    font-size: 11px;
+    color: #7b8ea6;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+.ds-shell .dsc-file-label {
+    display: inline-block;
+    background: #edf5ff;
+    color: #2462a8;
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+.ds-shell .dsc-file-open {
+    gap: 6px;
+    min-width: 90px;
+}
+.ds-shell .dsc-file-open img {
+    height: 17px;
+    width: 17px;
+    object-fit: contain;
+}
+.ds-shell .dsc-pagebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 23px;
+    gap: 12px;
+    color: #71829a;
+    font-size: 12px;
+    flex-wrap: wrap;
+}
+.ds-shell .dsc-pagebar > div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+.ds-shell .dsc-pagebar a {
+    color: #1266c5;
+    text-decoration: none;
+    font-weight: 700;
+}
+.ds-shell .dsc-no-categories,
+.ds-shell .dsc-no-files {
+    text-align: center;
+    padding: 38px 20px;
+    color: #60748e;
+}
+.ds-shell .dsc-no-categories img,
+.ds-shell .dsc-no-files img {
+    width: 145px;
+    height: 110px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.ds-shell .dsc-no-files strong {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #243852;
+}
+.ds-shell .dsc-no-files p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.ds-shell .dsc-error {
+    padding: 12px 15px;
+    border: 1px solid #eeb5bc;
+    background: #fff2f3;
+    color: #a51931;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+.ds-shell .dsc-modal {
+    max-width: 490px;
+}
+@media (max-width: 1500px) {
+    .ds-shell .dsc-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ds-shell .dsc-summary-detail {
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+}
+@media (max-width: 830px) {
+    .ds-shell .dsc-category-grid {
+        grid-template-columns: 1fr;
+    }
+    .ds-shell .dsc-summary {
+        gap: 15px;
+    }
+    .ds-shell .dsc-summary-divider {
+        height: 35px;
+    }
+    .ds-shell .dsc-file-label {
+        display: none;
+    }
+}
+@media (max-width: 560px) {
+    .ds-shell .dsc-file-row {
+        flex-wrap: wrap;
+    }
+    .ds-shell .dsc-file-info {
+        flex-basis: 70%;
+    }
+    .ds-shell .dsc-file-open {
+        width: 100%;
+    }
+    .ds-shell .dsc-filters {
+        justify-content: stretch;
+        flex-wrap: wrap;
+    }
+    .ds-shell .dsc-filters label {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .ds-shell .dsc-filters select {
+        flex: 1;
+    }
+    .ds-shell .dsc-summary-divider {
+        display: none;
+    }
+}

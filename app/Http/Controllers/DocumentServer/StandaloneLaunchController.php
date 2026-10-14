@@ -11,11 +11,12 @@ final class StandaloneLaunchController extends Controller
 {
     public function open(int $document, Request $request, StandaloneSessionService $sessions): JsonResponse
     {
-        $issued = $sessions->issue($document, (int)$request->user()->id);
+        $issued = $sessions->issue($document, (int) $request->user()->id);
         $doc = $issued['document'];
         $filename = rawurlencode($doc->original_filename);
         $fileUrl = $request->getSchemeAndHttpHost().'/standalone-dav/'.$issued['secret'].'/'.$filename;
         $scheme = $doc->extension === 'xlsx' ? 'ms-excel:' : 'ms-word:';
+
         return response()->json([
             'open_uri' => $scheme.($issued['mode'] === 'edit' ? 'ofe|u|' : 'ofv|u|').$fileUrl,
             'mode' => $issued['mode'],
@@ -26,7 +27,8 @@ final class StandaloneLaunchController extends Controller
 
     public function close(int $document, Request $request, StandaloneSessionService $sessions): JsonResponse
     {
-        $sessions->end($document, (int)$request->user()->id);
+        $sessions->end($document, (int) $request->user()->id);
+
         return response()->json(['closed' => true]);
     }
 }

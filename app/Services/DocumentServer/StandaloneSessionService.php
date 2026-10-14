@@ -5,7 +5,6 @@ namespace App\Services\DocumentServer;
 use App\Support\DocumentServer\DocumentAccess;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /** Desktop URLs are scoped bearer capabilities, not another account/password. */
@@ -17,7 +16,7 @@ final class StandaloneSessionService
             $doc = DB::table('documents')->where('id', $documentId)
                 ->whereNull('deleted_at')->lockForUpdate()->first();
             abort_unless($doc && $doc->status === 'active', 404);
-            abort_unless(in_array(strtolower($doc->extension), ['docx','xlsx'], true), 422, 'Only DOCX/XLSX are supported.');
+            abort_unless(in_array(strtolower($doc->extension), ['docx', 'xlsx'], true), 422, 'Only DOCX/XLSX are supported.');
             DocumentAccess::require($doc, $userId, 'view');
             $canEdit = DocumentAccess::allowed($doc, $userId, 'edit');
             if ($canEdit) {
@@ -52,6 +51,7 @@ final class StandaloneSessionService
             ]);
             DocumentAccess::record($userId, $documentId, 'desktop_session_started', $doc->title,
                 ['session_id' => $sessionId, 'mode' => $canEdit ? 'edit' : 'view']);
+
             return ['secret' => $secret, 'document' => $doc, 'session_id' => $sessionId, 'mode' => $canEdit ? 'edit' : 'view'];
         });
     }
@@ -59,7 +59,7 @@ final class StandaloneSessionService
     public function resolve(string $secret): object
     {
         // Respond 404 for all failed checks: do not expose tokens, users or file names.
-        if (!preg_match('/^[A-Za-z0-9_-]{43}$/D', $secret)) {
+        if (! preg_match('/^[A-Za-z0-9_-]{43}$/D', $secret)) {
             $this->denied('bad_token_format');
         }
 
@@ -68,12 +68,12 @@ final class StandaloneSessionService
             ->where('status', 'active')
             ->where('expires_at', '>', now())
             ->first();
-        if (!$session) {
+        if (! $session) {
             $this->denied('no_active_session');
         }
 
         $user = DB::table('users')->where('id', $session->user_id)->first();
-        if (!$user || $user->account_status !== 'active' || !$user->email_verified_at) {
+        if (! $user || $user->account_status !== 'active' || ! $user->email_verified_at) {
             $this->denied('inactive_or_unverified_user');
         }
 
@@ -81,12 +81,12 @@ final class StandaloneSessionService
             ->where('id', $session->document_id)
             ->whereNull('deleted_at')
             ->first();
-        if (!$document || $document->status !== 'active') {
+        if (! $document || $document->status !== 'active') {
             $this->denied('document_unavailable');
         }
 
         $action = $session->editor_name === 'standalone-edit' ? 'edit' : 'view';
-        if (!DocumentAccess::allowed($document, (int) $session->user_id, $action)) {
+        if (! DocumentAccess::allowed($document, (int) $session->user_id, $action)) {
             $this->denied('permission_revoked');
         }
 

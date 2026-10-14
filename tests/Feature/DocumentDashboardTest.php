@@ -16,6 +16,7 @@ class DocumentDashboardTest extends TestCase
     use RefreshDatabase;
 
     private User $owner;
+
     private User $colleague;
 
     protected function setUp(): void
@@ -45,6 +46,7 @@ class DocumentDashboardTest extends TestCase
             'size_bytes' => Storage::disk('local')->size($path), 'source' => 'upload',
             'created_by' => $this->owner->id, 'created_at' => $now, 'updated_at' => $now,
         ]);
+
         return $id;
     }
 

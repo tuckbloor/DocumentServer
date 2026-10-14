@@ -1,13 +1,8 @@
-
 <script setup lang="ts">
 import { Form, Head, Link } from '@inertiajs/vue3';
 import PasswordInput from '@/components/PasswordInput.vue';
 import { login } from '@/routes';
 import { update } from '@/routes/password';
-
-defineOptions({
-    layout: null,
-});
 
 const props = defineProps<{
     token: string;
@@ -48,9 +43,8 @@ const props = defineProps<{
                     </h1>
 
                     <p class="ds-intro">
-                        Create a secure password for your
-                        Document Server account and get back
-                        to managing your documents.
+                        Create a secure password for your Document Server
+                        account and get back to managing your documents.
                     </p>
 
                     <div class="ds-card">
@@ -74,9 +68,7 @@ const props = defineProps<{
                                         height="11"
                                         rx="2"
                                     />
-                                    <path
-                                        d="M8 10V7a4 4 0 0 1 8 0v3"
-                                    />
+                                    <path d="M8 10V7a4 4 0 0 1 8 0v3" />
                                     <circle cx="12" cy="15" r="1" />
                                     <path d="M12 16v2" />
                                 </svg>
@@ -84,19 +76,19 @@ const props = defineProps<{
 
                             <div>
                                 <h2>Reset your password</h2>
-                                <p>
-                                    Enter and confirm your new password.
-                                </p>
+                                <p>Enter and confirm your new password.</p>
                             </div>
                         </div>
 
                         <Form
                             v-bind="update.form()"
-                            :transform="(data) => ({
-                                ...data,
-                                token: props.token,
-                                email: props.email,
-                            })"
+                            :transform="
+                                (data) => ({
+                                    ...data,
+                                    token: props.token,
+                                    email: props.email,
+                                })
+                            "
                             :reset-on-success="[
                                 'password',
                                 'password_confirmation',
@@ -128,17 +120,15 @@ const props = defineProps<{
                                 </p>
 
                                 <p v-else class="ds-field-help">
-                                    This is the account associated
-                                    with your password reset request.
+                                    This is the account associated with your
+                                    password reset request.
                                 </p>
                             </div>
 
                             <!-- Password fields -->
                             <div class="ds-password-grid">
                                 <div class="ds-field">
-                                    <label for="password">
-                                        New password
-                                    </label>
+                                    <label for="password"> New password </label>
 
                                     <PasswordInput
                                         id="password"
@@ -190,8 +180,8 @@ const props = defineProps<{
                                 <div>
                                     <strong>Keep your account secure</strong>
                                     <p>
-                                        Choose a strong password that
-                                        you haven't used before.
+                                        Choose a strong password that you
+                                        haven't used before.
                                     </p>
                                 </div>
                             </div>
@@ -210,10 +200,7 @@ const props = defineProps<{
                                     }}
                                 </span>
 
-                                <span
-                                    v-if="!processing"
-                                    aria-hidden="true"
-                                >
+                                <span v-if="!processing" aria-hidden="true">
                                     →
                                 </span>
                             </button>
@@ -222,9 +209,7 @@ const props = defineProps<{
                         <div class="ds-card-footer">
                             <span>Remember your password?</span>
 
-                            <Link :href="login()">
-                                Back to sign in →
-                            </Link>
+                            <Link :href="login()"> Back to sign in → </Link>
                         </div>
                     </div>
 
@@ -248,17 +233,15 @@ const props = defineProps<{
                     </h2>
 
                     <p class="ds-showcase-intro">
-                        Secure access to Word and Excel files,
-                        organised document history and controlled
-                        collaboration in one workspace.
+                        Secure access to Word and Excel files, organised
+                        document history and controlled collaboration in one
+                        workspace.
                     </p>
 
                     <!-- Decorative HTML/CSS workspace preview -->
                     <div class="ds-workspace">
                         <div class="ds-workspace-sidebar">
-                            <div class="ds-workspace-logo">
-                                DS
-                            </div>
+                            <div class="ds-workspace-logo">DS</div>
 
                             <div class="ds-sidebar-selected">
                                 ▦ &nbsp; All documents
@@ -285,13 +268,9 @@ const props = defineProps<{
 
                         <div class="ds-workspace-content">
                             <div class="ds-workspace-toolbar">
-                                <div class="ds-search">
-                                    Search documents...
-                                </div>
+                                <div class="ds-search">Search documents...</div>
 
-                                <span class="ds-upload">
-                                    + Upload
-                                </span>
+                                <span class="ds-upload"> + Upload </span>
                             </div>
 
                             <div class="ds-workspace-heading">
@@ -300,9 +279,7 @@ const props = defineProps<{
                                     <p>Manage your documents</p>
                                 </div>
 
-                                <span class="ds-file-count">
-                                    128 files
-                                </span>
+                                <span class="ds-file-count"> 128 files </span>
                             </div>
 
                             <div class="ds-workspace-tabs">
@@ -314,9 +291,7 @@ const props = defineProps<{
                             </div>
 
                             <div class="ds-document-row">
-                                <div class="ds-word-icon">
-                                    W
-                                </div>
+                                <div class="ds-word-icon">W</div>
 
                                 <div class="ds-document-info">
                                     <strong>Backup Policy.docx</strong>
@@ -327,9 +302,7 @@ const props = defineProps<{
                             </div>
 
                             <div class="ds-document-row">
-                                <div class="ds-excel-icon">
-                                    X
-                                </div>
+                                <div class="ds-excel-icon">X</div>
 
                                 <div class="ds-document-info">
                                     <strong>Asset Register.xlsx</strong>
@@ -340,9 +313,7 @@ const props = defineProps<{
                             </div>
 
                             <div class="ds-document-row">
-                                <div class="ds-word-icon">
-                                    W
-                                </div>
+                                <div class="ds-word-icon">W</div>
 
                                 <div class="ds-document-info">
                                     <strong>Company Policy.docx</strong>
@@ -369,9 +340,7 @@ const props = defineProps<{
 
         <!-- Footer -->
         <footer class="ds-footer">
-            <span>
-                © {{ new Date().getFullYear() }} Document Server
-            </span>
+            <span> © {{ new Date().getFullYear() }} Document Server </span>
 
             <span>Secure document management</span>
         </footer>

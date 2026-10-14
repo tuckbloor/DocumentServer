@@ -19,6 +19,7 @@ class DocumentFavouriteController extends Controller
         } else {
             DB::table('document_favourites')->insert($key + ['created_at' => now(), 'updated_at' => now()]);
         }
+
         return back();
     }
 }

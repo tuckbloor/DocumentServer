@@ -45,7 +45,7 @@ class DashboardController extends Controller
             $query->where(function (Builder $q) use ($search) {
                 $escaped = str_replace(['%', '_'], ['\\%', '\\_'], $search);
                 $q->where('d.title', 'like', '%'.$escaped.'%')
-                  ->orWhere('d.original_filename', 'like', '%'.$escaped.'%');
+                    ->orWhere('d.original_filename', 'like', '%'.$escaped.'%');
             });
         }
         $type = $request->query('type');

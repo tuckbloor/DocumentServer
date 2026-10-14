@@ -1,13 +1,8 @@
-
 <script setup lang="ts">
 import { Form, Head, Link } from '@inertiajs/vue3';
 import PasswordInput from '@/components/PasswordInput.vue';
 import { login } from '@/routes';
 import { store } from '@/routes/register';
-
-defineOptions({
-    layout: null,
-});
 
 defineProps<{
     passwordRules: string;
@@ -25,9 +20,7 @@ defineProps<{
                 <span>Document <strong>Server</strong></span>
             </Link>
 
-            <Link href="/" class="ds-back">
-                ← Back to website
-            </Link>
+            <Link href="/" class="ds-back"> ← Back to website </Link>
         </header>
 
         <main class="ds-main">
@@ -39,14 +32,12 @@ defineProps<{
                         YOUR DOCUMENT WORKSPACE
                     </div>
 
-                    <h1>
-                        Join Document Server<span>.</span>
-                    </h1>
+                    <h1>Join Document Server<span>.</span></h1>
 
                     <p class="ds-intro">
-                        Create your account to access documents,
-                        collaborate with colleagues and manage
-                        your files in one secure workspace.
+                        Create your account to access documents, collaborate
+                        with colleagues and manage your files in one secure
+                        workspace.
                     </p>
 
                     <div class="ds-card">
@@ -71,9 +62,7 @@ defineProps<{
 
                             <div>
                                 <h2>Create your account</h2>
-                                <p>
-                                    Enter your details below to get started.
-                                </p>
+                                <p>Enter your details below to get started.</p>
                             </div>
                         </div>
 
@@ -89,9 +78,7 @@ defineProps<{
                             <div class="ds-form-grid">
                                 <!-- Full name -->
                                 <div class="ds-field">
-                                    <label for="name">
-                                        Full name
-                                    </label>
+                                    <label for="name"> Full name </label>
 
                                     <input
                                         id="name"
@@ -115,9 +102,7 @@ defineProps<{
 
                                 <!-- Email -->
                                 <div class="ds-field">
-                                    <label for="email">
-                                        Email address
-                                    </label>
+                                    <label for="email"> Email address </label>
 
                                     <input
                                         id="email"
@@ -140,9 +125,7 @@ defineProps<{
 
                                 <!-- Password -->
                                 <div class="ds-field">
-                                    <label for="password">
-                                        Password
-                                    </label>
+                                    <label for="password"> Password </label>
 
                                     <PasswordInput
                                         id="password"
@@ -191,9 +174,8 @@ defineProps<{
                                 <span class="ds-notice-icon">✓</span>
 
                                 <p>
-                                    Your account must meet your
-                                    organisation's registration and
-                                    access requirements before
+                                    Your account must meet your organisation's
+                                    registration and access requirements before
                                     documents become available.
                                 </p>
                             </div>
@@ -219,9 +201,7 @@ defineProps<{
                         <div class="ds-signin">
                             Already have an account?
 
-                            <Link :href="login()">
-                                Sign in →
-                            </Link>
+                            <Link :href="login()"> Sign in → </Link>
                         </div>
                     </div>
 
@@ -245,9 +225,9 @@ defineProps<{
                     </h2>
 
                     <p class="ds-showcase-text">
-                        Access Word and Excel documents, collaborate
-                        with colleagues and keep track of every
-                        revision in one place.
+                        Access Word and Excel documents, collaborate with
+                        colleagues and keep track of every revision in one
+                        place.
                     </p>
 
                     <!-- HTML/CSS document dashboard preview -->
@@ -280,13 +260,9 @@ defineProps<{
 
                         <div class="ds-preview-main">
                             <div class="ds-preview-toolbar">
-                                <div class="ds-search">
-                                    Search documents...
-                                </div>
+                                <div class="ds-search">Search documents...</div>
 
-                                <span class="ds-upload">
-                                    + Upload
-                                </span>
+                                <span class="ds-upload"> + Upload </span>
                             </div>
 
                             <div class="ds-preview-heading">
@@ -295,9 +271,7 @@ defineProps<{
                                     <p>Manage your team's files</p>
                                 </div>
 
-                                <span class="ds-file-count">
-                                    128 files
-                                </span>
+                                <span class="ds-file-count"> 128 files </span>
                             </div>
 
                             <div class="ds-preview-tabs">
@@ -357,9 +331,7 @@ defineProps<{
         </main>
 
         <footer class="ds-footer">
-            <span>
-                © {{ new Date().getFullYear() }} Document Server
-            </span>
+            <span> © {{ new Date().getFullYear() }} Document Server </span>
 
             <span>Document management workspace</span>
         </footer>

@@ -1,12 +1,7 @@
-
 <script setup lang="ts">
 import { Form, Head, Link } from '@inertiajs/vue3';
 import { login } from '@/routes';
 import { email } from '@/routes/password';
-
-defineOptions({
-    layout: null,
-});
 
 defineProps<{
     status?: string;
@@ -22,9 +17,7 @@ defineProps<{
             <Link href="/" class="ds-brand">
                 <span class="ds-brand-icon">DS</span>
 
-                <span>
-                    Document <strong>Server</strong>
-                </span>
+                <span> Document <strong>Server</strong> </span>
             </Link>
 
             <Link href="/" class="ds-header-link">
@@ -48,9 +41,9 @@ defineProps<{
                     </h1>
 
                     <p class="ds-intro">
-                        Enter the email address associated with your
-                        Document Server account. We'll send you a
-                        secure link to reset your password.
+                        Enter the email address associated with your Document
+                        Server account. We'll send you a secure link to reset
+                        your password.
                     </p>
 
                     <div class="ds-form-card">
@@ -81,18 +74,14 @@ defineProps<{
                             <div>
                                 <h2>Reset your password</h2>
                                 <p>
-                                    We'll help you regain access
-                                    to your documents.
+                                    We'll help you regain access to your
+                                    documents.
                                 </p>
                             </div>
                         </div>
 
                         <!-- Laravel status -->
-                        <div
-                            v-if="status"
-                            class="ds-success"
-                            role="status"
-                        >
+                        <div v-if="status" class="ds-success" role="status">
                             <span class="ds-success-icon">✓</span>
 
                             <div>
@@ -108,9 +97,7 @@ defineProps<{
                             class="ds-reset-form"
                         >
                             <div class="ds-field">
-                                <label for="email">
-                                    Email address
-                                </label>
+                                <label for="email"> Email address </label>
 
                                 <input
                                     id="email"
@@ -137,13 +124,9 @@ defineProps<{
                                     {{ errors.email }}
                                 </p>
 
-                                <p
-                                    v-else
-                                    id="email-help"
-                                    class="ds-field-help"
-                                >
-                                    Use the email address you registered
-                                    with Document Server.
+                                <p v-else id="email-help" class="ds-field-help">
+                                    Use the email address you registered with
+                                    Document Server.
                                 </p>
                             </div>
 
@@ -161,10 +144,7 @@ defineProps<{
                                     }}
                                 </span>
 
-                                <span
-                                    v-if="!processing"
-                                    aria-hidden="true"
-                                >
+                                <span v-if="!processing" aria-hidden="true">
                                     →
                                 </span>
                             </button>
@@ -173,9 +153,7 @@ defineProps<{
                         <div class="ds-signin-row">
                             <span>Remember your password?</span>
 
-                            <Link :href="login()">
-                                Back to sign in →
-                            </Link>
+                            <Link :href="login()"> Back to sign in → </Link>
                         </div>
                     </div>
 
@@ -191,9 +169,7 @@ defineProps<{
                                 <span class="ds-step">01</span>
                                 <div>
                                     <strong>Check your inbox</strong>
-                                    <p>
-                                        Look for your password reset email.
-                                    </p>
+                                    <p>Look for your password reset email.</p>
                                 </div>
                             </div>
 
@@ -201,9 +177,7 @@ defineProps<{
                                 <span class="ds-step">02</span>
                                 <div>
                                     <strong>Open the secure link</strong>
-                                    <p>
-                                        Follow the instructions in the email.
-                                    </p>
+                                    <p>Follow the instructions in the email.</p>
                                 </div>
                             </div>
 
@@ -212,8 +186,8 @@ defineProps<{
                                 <div>
                                     <strong>Sign back in</strong>
                                     <p>
-                                        Access your documents using
-                                        your new password.
+                                        Access your documents using your new
+                                        password.
                                     </p>
                                 </div>
                             </div>
@@ -236,34 +210,25 @@ defineProps<{
                     </h2>
 
                     <p class="ds-preview-intro">
-                        One place for Word and Excel files,
-                        controlled document sharing and
-                        organised revision history.
+                        One place for Word and Excel files, controlled document
+                        sharing and organised revision history.
                     </p>
 
                     <div class="ds-workspace">
                         <div class="ds-workspace-sidebar">
-                            <div class="ds-workspace-logo">
-                                DS
-                            </div>
+                            <div class="ds-workspace-logo">DS</div>
 
                             <div class="ds-sidebar-active">
                                 ▦ &nbsp; Documents
                             </div>
 
-                            <div class="ds-sidebar-item">
-                                ▤ &nbsp; My files
-                            </div>
+                            <div class="ds-sidebar-item">▤ &nbsp; My files</div>
 
-                            <div class="ds-sidebar-item">
-                                ◫ &nbsp; Shared
-                            </div>
+                            <div class="ds-sidebar-item">◫ &nbsp; Shared</div>
 
                             <div class="ds-sidebar-separator"></div>
 
-                            <div class="ds-sidebar-item">
-                                ◷ &nbsp; Recent
-                            </div>
+                            <div class="ds-sidebar-item">◷ &nbsp; Recent</div>
 
                             <div class="ds-sidebar-item">
                                 ☆ &nbsp; Favourites
@@ -287,68 +252,46 @@ defineProps<{
                                     <p>Your document workspace</p>
                                 </div>
 
-                                <span class="ds-file-total">
-                                    128 files
-                                </span>
+                                <span class="ds-file-total"> 128 files </span>
                             </div>
 
                             <div class="ds-workspace-tabs">
-                                <span class="ds-tab-selected">
-                                    All files
-                                </span>
+                                <span class="ds-tab-selected"> All files </span>
                                 <span>Word</span>
                                 <span>Excel</span>
                             </div>
 
                             <div class="ds-file-row">
-                                <span class="ds-file-icon ds-word">
-                                    W
-                                </span>
+                                <span class="ds-file-icon ds-word"> W </span>
 
                                 <div class="ds-file-details">
                                     <strong>Company Policy.docx</strong>
-                                    <small>
-                                        IT Policies · Updated today
-                                    </small>
+                                    <small> IT Policies · Updated today </small>
                                 </div>
 
-                                <span class="ds-version">
-                                    v3
-                                </span>
+                                <span class="ds-version"> v3 </span>
                             </div>
 
                             <div class="ds-file-row">
-                                <span class="ds-file-icon ds-excel">
-                                    X
-                                </span>
+                                <span class="ds-file-icon ds-excel"> X </span>
 
                                 <div class="ds-file-details">
                                     <strong>Asset Register.xlsx</strong>
-                                    <small>
-                                        Maintenance · Yesterday
-                                    </small>
+                                    <small> Maintenance · Yesterday </small>
                                 </div>
 
-                                <span class="ds-version">
-                                    v2
-                                </span>
+                                <span class="ds-version"> v2 </span>
                             </div>
 
                             <div class="ds-file-row">
-                                <span class="ds-file-icon ds-word">
-                                    W
-                                </span>
+                                <span class="ds-file-icon ds-word"> W </span>
 
                                 <div class="ds-file-details">
                                     <strong>Backup Procedure.docx</strong>
-                                    <small>
-                                        Infrastructure · Shared
-                                    </small>
+                                    <small> Infrastructure · Shared </small>
                                 </div>
 
-                                <span class="ds-version">
-                                    v5
-                                </span>
+                                <span class="ds-version"> v5 </span>
                             </div>
 
                             <div class="ds-workspace-footer">
@@ -367,9 +310,7 @@ defineProps<{
         </main>
 
         <footer class="ds-auth-footer">
-            <span>
-                © {{ new Date().getFullYear() }} Document Server
-            </span>
+            <span> © {{ new Date().getFullYear() }} Document Server </span>
 
             <span>Secure document management</span>
         </footer>
@@ -587,7 +528,7 @@ defineProps<{
     box-shadow: 0 0 0 4px rgba(23, 105, 215, 0.11);
 }
 
-.ds-field input[aria-invalid="true"] {
+.ds-field input[aria-invalid='true'] {
     border-color: #c62828;
 }
 

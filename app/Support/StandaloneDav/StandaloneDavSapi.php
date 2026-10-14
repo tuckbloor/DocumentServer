@@ -11,6 +11,7 @@ use Sabre\HTTP\Sapi;
 final class StandaloneDavSapi extends Sapi
 {
     private static ?SabreRequest $incoming = null;
+
     private static ?ResponseInterface $outgoing = null;
 
     public static function prepare(LaravelRequest $request): void
@@ -41,6 +42,7 @@ final class StandaloneDavSapi extends Sapi
         $response = self::$outgoing;
         self::$outgoing = null;
         self::$incoming = null;
+
         return $response;
     }
 }

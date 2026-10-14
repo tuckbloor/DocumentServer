@@ -14,8 +14,11 @@ class DocumentCategoriesTest extends TestCase
     use RefreshDatabase;
 
     private User $owner;
+
     private User $colleague;
+
     private int $policies;
+
     private int $security;
 
     protected function setUp(): void
